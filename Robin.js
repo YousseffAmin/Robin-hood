@@ -4,7 +4,7 @@ const adventurer = {
     inventory: ["sword", "potion", "artifact"]
   };
   
-  // Log each item in Robin's inventory
+  
   for (let i = 0; i < adventurer.inventory.length; i++) {
     console.log(adventurer.inventory[i]);
   }
@@ -19,20 +19,18 @@ const adventurer = {
     }
   };
   
-  // Add a companion for Leo
+  
   adventurer.companion.companion = {
     name: "Frank",
     type: "Flea",
     inventory: ["small hat", "sunglasses"]
   };
   
-  // Add roll method to the adventurer
   adventurer.roll = function(mod = 0) {
     const result = Math.floor(Math.random() * 20) + 1 + mod;
     console.log(`${this.name} rolled a ${result}.`);
   };
   
-  // Test the roll method
   adventurer.roll();
   adventurer.roll(2);
   adventurer.roll(-1);
@@ -50,7 +48,6 @@ const adventurer = {
     }
   }
   
-  // Create Robin and companions using the Character class
   const robin = new Character("Robin");
   robin.inventory = ["sword", "potion", "artifact"];
   robin.companion = new Character("Leo");
@@ -59,7 +56,6 @@ const adventurer = {
   robin.companion.companion.type = "Flea";
   robin.companion.companion.inventory = ["small hat", "sunglasses"];
   
-  // Test roll method for Robin and companions
   robin.roll();
   robin.companion.roll();
   robin.companion.companion.roll();
